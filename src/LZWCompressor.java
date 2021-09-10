@@ -12,7 +12,7 @@ public class LZWCompressor {
 	}
 	
 	//creating Dictionary dictionary
-	public static HashMap<String, Integer> dictionary;
+	public HashMap<String, Integer> dictionary;
 	
 	//adding existing ASCII characters to dictionary
 	{
@@ -42,9 +42,13 @@ public class LZWCompressor {
 				current = next;
 			}
 		}
+		
+		//return identical text
 		if (!current.equals(""))
 			output+=current;
 		reader.close();
 		return output;
 	}
+	
+	
 }
