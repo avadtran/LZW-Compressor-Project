@@ -1,0 +1,1 @@
+I fixed the compressor in order to output an ArrayList of integers, rather than all in a String.
