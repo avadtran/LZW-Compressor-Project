@@ -2,3 +2,6 @@
 /LZWCompressor.class
 /LZWTester.class
 /lzw-file1.txt
+/.DS_Store
+/decompressed.txt
+/lzw-file3.txt
