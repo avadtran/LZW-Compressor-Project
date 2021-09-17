@@ -8,17 +8,6 @@ public class BinaryConverter {
 	int sum;
 //	
 	public void convertToBinary() throws IOException{
-//		
-//		InputStream inputStream = new FileInputStream(input);
-//        OutputStream outputStream = new FileOutputStream("binaryOutput.txt");
-//        
-//        byte[] buffer = new byte[BUFFER_SIZE];
-//        
-//        while (inputStream.read(buffer) != -1) {
-//            outputStream.write(buffer);
-//        }
-//	}
-	
 	DataOutputStream dos = new DataOutputStream(new FileOutputStream("binaryOutput.txt"));
 	
 	ArrayList<Integer> list = new ArrayList<Integer>();{
