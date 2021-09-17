@@ -68,13 +68,13 @@ public class LZWCompressor {
         StringBuilder output = new StringBuilder(c); //a StringBuilder object to which characters will be added to. will be outputted at the end of the method.
         
         for (int integerKey : outputInts) { //integerKey is the integer key associated with a string of characters in the dictionary
-            if (dict.containsKey(integerKey)) { //checks if integer value already exists. if it does, set n equal to the string associated in order to append onto StringBuilder.
+            if (dict.containsKey(integerKey)) { //checks if integer value already exists in dictionary. if it does, set n equal to the string associated in order to append onto StringBuilder.
             	n = dict.get(integerKey);
             }else if (integerKey == dictSize) { //if the integer equals dictionary size, need to append first character to the string before adding to the dictionary.
             	n = c + c.charAt(0);
             }
-            output.append(n); //continue constructing output
-            dict.put(dictSize++, c + n.charAt(0)); //add value to dictionary
+            output.append(n); //constructing output
+            dict.put(dictSize++, c + n.charAt(0)); //add new value to dictionary
             c=n; //prepare for next iteration of for loop by changing c
         }
         PrintWriter out = new PrintWriter("/Users/zanedanton/Documents/GitHub/LZW-Compressor-Project/src/decompressed.txt"); //outputting to file.
