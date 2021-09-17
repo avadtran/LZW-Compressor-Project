@@ -70,7 +70,7 @@ public class LZWCompressor {
         for (int integerKey : outputInts) { //integerKey is the integer key associated with a string of characters in the dictionary
             if (dict.containsKey(integerKey)) { //checks if integer value already exists in dictionary. if it does, set n equal to the string associated in order to append onto StringBuilder.
             	n = dict.get(integerKey);
-            }else if (integerKey == dictSize) { //if the integer equals dictionary size, need to append first character to the string before adding to the dictionary.
+            }else{ //if the integer equals dictionary size, need to append first character to the string before adding to the dictionary.
             	n = c + c.charAt(0);
             }
             output.append(n); //constructing output
